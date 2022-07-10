@@ -29,8 +29,8 @@ Desktop:
 
 ### Links
 
-- [Solution URL:](https://github.com/RafisElias/order-summary-card)
-<!-- - [Live Site URL:](https://jazzy-melba-629cb0.netlify.app/) -->
+- [Solution URL](https://github.com/RafisElias/order-summary-card)
+- [Live Site URL](https://inspiring-khapse-2f90ee.netlify.app)
 
 ## My process
 
