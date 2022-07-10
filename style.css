@@ -1,0 +1,214 @@
+/** https://piccalil.li/blog/a-modern-css-reset **/
+
+:root {
+  --cls-pale-blue: hsl(255, 100%, 94%);
+  --cls-bright-clue: hsl(245, 75%, 52%);
+
+  /* Neutral Colors */
+  --cls-very-pale-blue: hsl(255, 100%, 98%);
+  --cls-desaturated-blue: hsl(244, 23%, 55%);
+  --cls-dark-blue: hsl(223, 47%, 23%);
+
+  --fs-base: 1rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: hsl(225, 77.8%, 92.9%);
+  background-image: url('./images/pattern-background-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+main {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  width: min(95%, 26rem);
+  overflow: hidden;
+  font-size: var(--fs-base);
+  margin-inline: auto;
+  box-shadow: 0 5px 10px 5px rgb(0 0 0 / 5%);
+}
+
+.informations {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.title {
+  font-weight: 900;
+  color: var(--cls-dark-blue);
+}
+
+.description {
+  margin-top: 1rem;
+  color: var(--cls-desaturated-blue);
+}
+
+.payment-container {
+  display: flex;
+  background-color: var(--cls-very-pale-blue);
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  margin-block: 1.5rem;
+}
+
+.payment-container>img {
+  width: 3rem;
+  aspect-ratio: 1;
+}
+
+.payment-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1rem; */
+}
+
+.payment-type {
+  font-weight: 900;
+  color: var(--cls-dark-blue);
+}
+
+.payment-value {
+  font-weight: 500;
+  color: var(--cls-desaturated-blue);
+}
+
+.payment-change {
+  font-weight: 700;
+  color: var(--cls-bright-clue);
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.payment-change:hover {
+  color: hsl(245, 75%, 72%);
+}
+
+.btn {
+  padding: 0.70rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.70rem;
+  cursor: pointer;
+}
+
+.btn-payment {
+  background-color: var(--cls-bright-clue);
+  color: #ffffff;
+  margin-block-end: 1rem;
+  -webkit-box-shadow: 0px 10px 11px -6px rgba(176, 162, 176, 1);
+  -moz-box-shadow: 0px 10px 11px -6px rgba(176, 162, 176, 1);
+  box-shadow: 0px 10px 11px -6px rgba(176, 162, 176, 1);
+}
+
+.btn-payment:hover,
+.btn-payment:focus {
+  background-color: hsl(245, 75%, 72%);
+}
+
+.btn-cancel {
+  background-color: transparent;
+  color: var(--cls-desaturated-blue);
+}
+
+.btn-cancel:hover,
+.btn-cancel:focus {
+  color: black;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 64em) {
+  body {
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+  }
+}
